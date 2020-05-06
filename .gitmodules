@@ -4,3 +4,6 @@
 [submodule "sub/signature-base"]
 	path = sub/signature-base
 	url = https://github.com/Neo23x0/signature-base.git
+[submodule "sub/Malware-Misc-RE"]
+	path = sub/Malware-Misc-RE
+	url = https://github.com/k-vitali/Malware-Misc-RE.git
