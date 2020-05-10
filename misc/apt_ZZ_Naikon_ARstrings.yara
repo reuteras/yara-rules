@@ -1,12 +1,12 @@
 rule apt_ZZ_Naikon_ARstrings : Naikon 
 {
-	meta:
+    meta:
         copyright = "Kaspersky"
         description = "Rule to detect Naikon aria samples"
         hash = "2B4D3AD32C23BD492EA945EB8E59B758"
         date = "2020-05-07"
         version = "1.0"
-		url = "https://securelist.com/naikons-aria/96899/"
+        url = "https://securelist.com/naikons-aria/96899/"
  
     strings:
         $a1 = "Terminate Process [PID=%d] succeeds!" fullword wide

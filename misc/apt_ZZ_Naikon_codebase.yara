@@ -8,7 +8,7 @@ rule apt_ZZ_Naikon_codebase : Naikon
         version = "1.0"
         date = "2018-06-28"
         last_modified = "2018-06-28"
-		url = "https://securelist.com/naikons-aria/96899/"
+        url = "https://securelist.com/naikons-aria/96899/"
 
     strings:
         $a1 = "Create Directroy [%s] Failed:%d" wide
