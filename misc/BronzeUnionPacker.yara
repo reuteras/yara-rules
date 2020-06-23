@@ -1,4 +1,5 @@
 import "pe"
+
 rule BronzeUnionPacker {
     meta:
         url = "https://www.blackberry.com/content/dam/blackberry-com/asset/enterprise/pdf/direct/report-bb-decade-of-the-rats.pdf"

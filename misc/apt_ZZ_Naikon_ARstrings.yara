@@ -1,4 +1,4 @@
-rule apt_ZZ_Naikon_ARstrings : Naikon 
+rule apt_ZZ_Naikon_ARstrings : Naikon
 {
     meta:
         copyright = "Kaspersky"
@@ -7,7 +7,7 @@ rule apt_ZZ_Naikon_ARstrings : Naikon
         date = "2020-05-07"
         version = "1.0"
         url = "https://securelist.com/naikons-aria/96899/"
- 
+
     strings:
         $a1 = "Terminate Process [PID=%d] succeeds!" fullword wide
         $a2 = "TerminateProcess [PID=%d] Failed:%d" fullword wide
@@ -26,10 +26,10 @@ rule apt_ZZ_Naikon_ARstrings : Naikon
         $a15 = "CreateFile [%s] Error:%d" fullword wide
         $a16 = "DebugAzManager" fullword ascii
         $a17 = "Create Directroy [%s] Failed:%d" fullword wide
- 
+
         $m1 = "TCPx86.dll" fullword wide ascii
         $m2 = "aria-body" nocase wide ascii
- 
+
     condition:
         uint16(0) == 0x5A4D and
         filesize < 450000 and

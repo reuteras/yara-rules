@@ -1,4 +1,4 @@
-rule apt_ZZ_Naikon_codebase : Naikon 
+rule apt_ZZ_Naikon_codebase : Naikon
 {
     meta:
         report = "Naikon New AR Backdoor Deployment to Southeast Asia"
