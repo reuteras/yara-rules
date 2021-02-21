@@ -18,5 +18,11 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     sed -E "s#sub/APT_REPORT/Turla/2017/PENQUIN_MOONLIT_MAZE.yara##" | \
     sed -E "s#sub/APT_REPORT/APT28/yara/APT28.yar##" | \
     sed -E "s#sub/APT_REPORT/Oceanlotus/oceanlotus_png_loader.yar##" | \
+    sed -E "s#sub/Yara-Rules/mobile/MOBILE_pwndroid5_downloader.yar##" | \
+    sed -E "s#sub/Yara-Rules/mobile/Android_SandroRat.yar##" | \
+    sed -E "s#sub/Yara-Rules/mobile/Android_Clicker_G.yar##" | \
+    sed -E "s#sub/Yara-Rules/mobile/Android_SpyAgent.yar##" | \
+    sed -E "s#sub/Yara-Rules/APT/APT_Derusbi.yar##" | \
     tr -d '\n' | \
     xargs -0 cat > total/total.yara
+    # sed -E "s###" | \
