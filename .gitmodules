@@ -10,3 +10,6 @@
 [submodule "sub/APT_REPORT"]
 	path = sub/APT_REPORT
 	url = https://github.com/blackorbird/APT_REPORT.git
+[submodule "sub/Yara-Rules"]
+	path = sub/Yara-Rules
+	url = https://github.com/advanced-threat-research/Yara-Rules.git
