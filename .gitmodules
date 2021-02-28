@@ -9,10 +9,7 @@
 	url = https://github.com/k-vitali/Malware-Misc-RE.git
 [submodule "sub/APT_REPORT"]
 	path = sub/APT_REPORT
-	url = https://github.com/blackorbird/APT_REPORT.git
+    url = https://github.com/blackorbird/APT_REPORT.git
 [submodule "sub/Yara-Rules"]
 	path = sub/Yara-Rules
 	url = https://github.com/advanced-threat-research/Yara-Rules.git
-[submodule "sub/reversinglabs-yara-rules"]
-	path = sub/reversinglabs-yara-rules
-	url = https://github.com/reversinglabs/reversinglabs-yara-rules.git
