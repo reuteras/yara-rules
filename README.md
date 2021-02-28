@@ -8,3 +8,7 @@ Collection of some YARA rules. Uses the following submodules:
 * [https://github.com/k-vitali/Malware-Misc-RE.git)(https://github.com/k-vitali/Malware-Misc-RE.git) from [https://github.com/k-vitali/Malware-Misc-RE](https://github.com/k-vitali/Malware-Misc-RE)
 * [https://github.com/advanced-threat-research/Yara-Rules.git]https://github.com/advanced-threat-research/Yara-Rules
 
+TODO
+
+- Add [https://github.com/reversinglabs/reversinglabs-yara-rules](https://github.com/reversinglabs/reversinglabs-yara-rules).
+
