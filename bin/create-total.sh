@@ -23,6 +23,15 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     sed -E "s#sub/Yara-Rules/mobile/Android_Clicker_G.yar##" | \
     sed -E "s#sub/Yara-Rules/mobile/Android_SpyAgent.yar##" | \
     sed -E "s#sub/Yara-Rules/APT/APT_Derusbi.yar##" | \
+    sed -E "s#sub/DailyIOC/2020-04-29/Yara_Rule_APT_Bazar-April_2020_1.yar##" | \
+    sed -E "s#sub/DailyIOC/2020-06-23/APT_Lazarus_Stealer_June_2020_1.yar##" | \
+    sed -E "s#sub/DailyIOC/2020-06-26/Heinote_June_2020-1.yar##" | \
+    sed -E "s#sub/DailyIOC/2020-07-23/Yara_Rule_APT_Lazarus_Stealer_July_2020_1.yar##" | \
+    sed -E "s#sub/DailyIOC/2020-08-24/SideWinder/APT_SideWinder_NET_Loader_Aug_2020_1.yar##" | \
+    sed -E "s#sub/DailyIOC/2020-08-26/APT_OilRig_2016.yar##" | \
+    sed -E "s#sub/DailyIOC/2020-08-27/APT_Patchwork_Tool_CVE_2019-0808_1.yar##" | \
+    sed -E "s#sub/DailyIOC/2020-09-14/SLoad/Mal_Loader_Sload_Sep-2020-1.yar##" | \
+    sed -E "s#sub/DailyIOC/2020-10-31/Ran_Egregor_Oct_2020_1 .yar##" | \
     tr -d '\n' | \
     xargs -0 cat > total/total.yara
     # sed -E "s###" | \

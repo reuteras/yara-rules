@@ -13,3 +13,6 @@
 [submodule "sub/Yara-Rules"]
 	path = sub/Yara-Rules
 	url = https://github.com/advanced-threat-research/Yara-Rules.git
+[submodule "sub/DailyIOC"]
+	path = sub/DailyIOC
+	url = https://github.com/StrangerealIntel/DailyIOC.git
