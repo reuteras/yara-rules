@@ -34,6 +34,8 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     sed -E "s#sub/DailyIOC/2021-03-17/APT_FIN8_BADHATCH_Mar_2021_1.yar##" | \
     sed -E "s#sub/Yara-Rules/ransomware/ransom_BlackKingDom.yar##" | \
     sed -E "s#sub/DailyIOC/2020-10-31/Ran_Egregor_Oct_2020_1 .yar##" | \
+    sed -E "s#sub/DailyIOC/2021-05-03/APT27/APT_APT27_Enc_Hyperbro_Apr_2021_1.yara##" | \
+    sed -E "s#sub/DailyIOC/2021-05-03/APT27/APT_APT27_Hyperbro_Apr_2021_1.yara##" | \
     tr -d '\n' | \
     xargs -0 cat > total/total.yara
     # sed -E "s###" | \
