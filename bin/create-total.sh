@@ -2,6 +2,13 @@
 
 [[ ! -d total ]] && mkdir total
 
+# Add created time in total.yara
+{
+    echo -n '// Created: '
+    date
+    echo ""
+} > total/total.yara
+
 find -E misc sub -regex ".*\.yara?" -print0 | \
     # Remove rules specific for LOKI and SPARK, https://github.com/Neo23x0/signature-base#external-variables-in-yara-rules
     sed -E "s#sub/signature-base/yara/(generic_anomalies|general_cloaking|thor_inverse_matches|yara_mixed_ext_vars)\.yar##g" | \
@@ -40,5 +47,5 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     sed -E "s#sub/Malware-Misc-RE/2020-04-07-qbot-qsort-miniupnp-vk.yar##" | \
     sed -E "s#sub/Malware-Misc-RE/2020-03-19-netwalker-yara-config-yar-vk.yar##" | \
     tr -d '\n' | \
-    xargs -0 cat > total/total.yara
+    xargs -0 cat >> total/total.yara
     # sed -E "s###" | \
