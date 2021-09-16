@@ -10,11 +10,6 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     sed -E "s#sub/malware-ioc/turla/(carbon|gazer)\.yar##g" | \
     sed -E "s#sub/malware-ioc/groundbait/prikormka.yar##" | \
     sed -E "s#sub/Malware-Misc-RE/2020-04-18-maze-ransomware-unpacked-payload.vk.yar##" | \
-    # Remove file with <fs>...</fs> tag
-    sed -E "s#sub/Malware-Misc-RE/2020-03-27-dridex-worker-config-software-banking-yara.vk.yar##" | \
-    # Remove files with errors
-    sed -E "s#sub/Malware-Misc-RE/2020-04-07-qbot-qsort-miniupnp-vk.yar##" | \
-    sed -E "s#sub/Malware-Misc-RE/2020-03-19-netwalker-yara-config-yar-vk.yar##" | \
     sed -E "s#sub/APT_REPORT/Turla/2017/PENQUIN_MOONLIT_MAZE.yara##" | \
     sed -E "s#sub/APT_REPORT/APT28/yara/APT28.yar##" | \
     sed -E "s#sub/APT_REPORT/Oceanlotus/oceanlotus_png_loader.yar##" | \
@@ -38,6 +33,12 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     sed -E "s#sub/DailyIOC/2021-05-03/APT27/APT_APT27_Hyperbro_Apr_2021_1.yara##" | \
     sed -E "s#sub/DailyIOC/2021-06-18/Netfilter/MAL_Netfilter_Dropper_Jun_2021_1.yara##" | \
     sed -E "s#sub/DailyIOC/2021-06-18/Netfilter/MAL_Netfilter_May_2021_1.yara##" | \
+    # Old rules
+    # Remove file with <fs>...</fs> tag
+    sed -E "s#sub/Malware-Misc-RE/2020-03-27-dridex-worker-config-software-banking-yara.vk.yar##" | \
+    # Remove files with errors
+    sed -E "s#sub/Malware-Misc-RE/2020-04-07-qbot-qsort-miniupnp-vk.yar##" | \
+    sed -E "s#sub/Malware-Misc-RE/2020-03-19-netwalker-yara-config-yar-vk.yar##" | \
     tr -d '\n' | \
     xargs -0 cat > total/total.yara
     # sed -E "s###" | \
