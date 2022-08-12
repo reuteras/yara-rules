@@ -13,3 +13,6 @@
 [submodule "sub/DailyIOC"]
 	path = sub/DailyIOC
 	url = https://github.com/StrangerealIntel/DailyIOC.git
+[submodule "sub/protections-artifacts"]
+	path = sub/protections-artifacts
+	url = https://github.com/elastic/protections-artifacts.git

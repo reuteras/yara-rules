@@ -11,7 +11,8 @@ total:
 	cat total/total.yara capa/capa.yar > total/total_inc_capa.yar
 update-git:
 	git pull
-	git submodule foreach git pull origin master
+	cd sub && git submodule update --remote
+	# git submodule foreach git pull origin master
 update-capa2yara:
 	wget -O capa/capa.yar https://raw.githubusercontent.com/ruppde/yara_rules/main/capa2yara/capa.yar
 yara: total test
