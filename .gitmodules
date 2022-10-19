@@ -16,3 +16,4 @@
 [submodule "sub/protections-artifacts"]
 	path = sub/protections-artifacts
 	url = https://github.com/elastic/protections-artifacts.git
+	branch = main

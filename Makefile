@@ -10,7 +10,6 @@ total:
 	./bin/create-total.sh
 	cat total/total.yara capa/capa.yar > total/total_inc_capa.yar
 update-git:
-	git pull
 	cd sub && git submodule update --remote
 	# git submodule foreach git pull origin master
 update-capa2yara:
