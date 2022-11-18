@@ -9,11 +9,12 @@
     echo ""
 } > total/total.yara
 
-find misc sub -regex ".*\.yara?" -print0 | \
+find -E misc sub -regex ".*\.yara?" -print0 | \
     # Remove rules specific for LOKI and SPARK, https://github.com/Neo23x0/signature-base#external-variables-in-yara-rules
     sed -E "s#sub/signature-base/yara/(generic_anomalies|general_cloaking|thor_inverse_matches|yara_mixed_ext_vars)\.yar##g" | \
     sed -E "s#sub/signature-base/yara/apt_turla_penquin.yar##" | \
     sed -E "s#sub/signature-base/yara/gen_webshells.yar##" | \
+    sed -E "s#sub/signature-base/yara/gen_webshells_ext_vars.yar##" | \
     # Remove duplicte rules
     sed -E "s#sub/malware-ioc/turla/(carbon|gazer)\.yar##g" | \
     sed -E "s#sub/malware-ioc/groundbait/prikormka.yar##" | \
@@ -41,7 +42,9 @@ find misc sub -regex ".*\.yara?" -print0 | \
     sed -E "s#sub/DailyIOC/2021-05-03/APT27/APT_APT27_Hyperbro_Apr_2021_1.yara##" | \
     sed -E "s#sub/DailyIOC/2021-06-18/Netfilter/MAL_Netfilter_Dropper_Jun_2021_1.yara##" | \
     sed -E "s#sub/DailyIOC/2021-06-18/Netfilter/MAL_Netfilter_May_2021_1.yara##" | \
-    # Old rules
+    # Remove slow rules
+    sed -E "s#sub/GCTI/YARA/CobaltStrike/CobaltStrike__Resources_Artifact32svc_Exe_v1_49_to_v4_x.yara##" | \
+    sed -E "s#sub/protections-artifacts/yara/rules/Windows_Trojan_CobaltStrike.yar##" | \
     # Remove file with <fs>...</fs> tag
     sed -E "s#sub/Malware-Misc-RE/2020-03-27-dridex-worker-config-software-banking-yara.vk.yar##" | \
     # Remove files with errors

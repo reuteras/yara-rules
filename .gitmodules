@@ -17,3 +17,6 @@
 	path = sub/protections-artifacts
 	url = https://github.com/elastic/protections-artifacts.git
 	branch = main
+[submodule "sub/GCTI"]
+	path = sub/GCTI
+	url = https://github.com/chronicle/GCTI.git
