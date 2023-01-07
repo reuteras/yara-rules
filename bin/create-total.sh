@@ -15,6 +15,7 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     sed -E "s#sub/signature-base/yara/apt_turla_penquin.yar##" | \
     sed -E "s#sub/signature-base/yara/gen_webshells.yar##" | \
     sed -E "s#sub/signature-base/yara/gen_webshells_ext_vars.yar##" | \
+    sed -E "s#sub/signature-base/yara/configured_vulns_ext_vars.yar##" | \
     # Remove duplicte rules
     sed -E "s#sub/malware-ioc/turla/(carbon|gazer)\.yar##g" | \
     sed -E "s#sub/malware-ioc/groundbait/prikormka.yar##" | \
@@ -50,6 +51,8 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     # Remove files with errors
     sed -E "s#sub/Malware-Misc-RE/2020-04-07-qbot-qsort-miniupnp-vk.yar##" | \
     sed -E "s#sub/Malware-Misc-RE/2020-03-19-netwalker-yara-config-yar-vk.yar##" | \
+    # Added to signature-base
+    sed -E "s#sub/GCTI/.*##" | \
     tr '\n' ' ' | \
     xargs -0 cat >> total/total.yara
     # sed -E "s###" | \
