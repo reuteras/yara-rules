@@ -20,3 +20,6 @@
 [submodule "sub/GCTI"]
 	path = sub/GCTI
 	url = https://github.com/chronicle/GCTI.git
+[submodule "sub/reversinglabs-yara-rules"]
+	path = sub/reversinglabs-yara-rules
+	url = https://github.com/reversinglabs/reversinglabs-yara-rules.git
