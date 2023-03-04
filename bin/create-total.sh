@@ -2,12 +2,7 @@
 
 [[ ! -d total ]] && mkdir total
 
-# Add created time in total.yara
-{
-    echo -n '// Created: '
-    date
-    echo ""
-} > total/total.yara
+rm total/total.yara
 
 find -E misc sub -regex ".*\.yara?" -print0 | \
     # Remove rules specific for LOKI and SPARK, https://github.com/Neo23x0/signature-base#external-variables-in-yara-rules
