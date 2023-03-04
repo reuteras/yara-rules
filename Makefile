@@ -9,9 +9,11 @@ sig:
 	cp -r sub/signature-base/yara/* tmp
 	cd tmp && rm generic_anomalies.yar general_cloaking.yar gen_webshells_ext_vars.yar thor_inverse_matches.yar yara_mixed_ext_vars.yar configured_vulns_ext_vars.yar
 	find tmp -type f -name "*.yar" -exec cat {} \; > signature.yara
-	7z a -pinfected signature.7z signature.yara
+	cp -r sub/signature-base .
+	rm -rf signature-base/.git* signature-base/.travis.yml signature-base/.yara-ci.yml
+	7z a -pinfected signature.7z signature.yara signature-base
 	mv signature.7z signature/
-	rm -rf tmp signature.yara
+	rm -rf tmp signature.yara signature-base
 test:
 	yara total/total.yara test
 total:
