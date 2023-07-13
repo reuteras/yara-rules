@@ -8,10 +8,12 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     # Remove rules specific for LOKI and SPARK, https://github.com/Neo23x0/signature-base#external-variables-in-yara-rules
     sed -E "s#sub/signature-base/yara/(generic_anomalies|general_cloaking|thor_inverse_matches|yara_mixed_ext_vars)\.yar##g" | \
     sed -E "s#sub/signature-base/yara/apt_turla_penquin.yar##" | \
-    sed -E "s#sub/signature-base/yara/gen_webshells.yar##" | \
-    sed -E "s#sub/signature-base/yara/gen_mal_3cx_compromise_mar23.yar##" | \
-    sed -E "s#sub/signature-base/yara/gen_webshells_ext_vars.yar##" | \
     sed -E "s#sub/signature-base/yara/configured_vulns_ext_vars.yar##" | \
+    sed -E "s#sub/signature-base/yara/gen_fake_amsi_dll.yar##" | \
+    sed -E "s#sub/signature-base/yara/gen_mal_3cx_compromise_mar23.yar##" | \
+    sed -E "s#sub/signature-base/yara/gen_webshells.yar##" | \
+    sed -E "s#sub/signature-base/yara/gen_webshells_ext_vars.yar##" | \
+    sed -E "s#sub/signature-base/yara/yara-rules_vuln_drivers_strict_renamed.yar##" | \
     # Remove duplicte rules
     sed -E "s#sub/malware-ioc/turla/(carbon|gazer)\.yar##g" | \
     sed -E "s#sub/malware-ioc/groundbait/prikormka.yar##" | \
