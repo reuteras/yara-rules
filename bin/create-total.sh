@@ -9,6 +9,7 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     sed -E "s#sub/signature-base/yara/(generic_anomalies|general_cloaking|thor_inverse_matches|yara_mixed_ext_vars)\.yar##g" | \
     sed -E "s#sub/signature-base/yara/apt_turla_penquin.yar##" | \
     sed -E "s#sub/signature-base/yara/configured_vulns_ext_vars.yar##" | \
+    sed -E "s#sub/signature-base/yara/expl_citrix_netscaler_adc_exploitation_cve_2023_3519.yar##" | \
     sed -E "s#sub/signature-base/yara/gen_fake_amsi_dll.yar##" | \
     sed -E "s#sub/signature-base/yara/gen_mal_3cx_compromise_mar23.yar##" | \
     sed -E "s#sub/signature-base/yara/gen_webshells.yar##" | \
