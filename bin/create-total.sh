@@ -15,6 +15,7 @@ find -E misc sub -regex ".*\.yara?" -print0 | \
     sed -E "s#sub/signature-base/yara/gen_webshells.yar##" | \
     sed -E "s#sub/signature-base/yara/gen_webshells_ext_vars.yar##" | \
     sed -E "s#sub/signature-base/yara/yara-rules_vuln_drivers_strict_renamed.yar##" | \
+    sed -E "s#sub/signature-base/yara/gen_vcruntime140_dll_sideloading.yar##" | \
     # Remove duplicte rules
     sed -E "s#sub/malware-ioc/turla/(carbon|gazer)\.yar##g" | \
     sed -E "s#sub/malware-ioc/groundbait/prikormka.yar##" | \
