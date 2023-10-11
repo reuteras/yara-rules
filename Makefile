@@ -11,7 +11,7 @@ sig:
 	find tmp -type f -name "*.yar" -exec cat {} \; > signature.yara
 	cp -r sub/signature-base .
 	rm -rf signature-base/.git* signature-base/.travis.yml signature-base/.yara-ci.yml
-	7z a -pinfected signature.7z signature.yara signature-base
+	7zz a -pinfected signature.7z signature.yara signature-base
 	mv signature.7z signature/
 	rm -rf tmp signature.yara signature-base
 test:
@@ -19,7 +19,7 @@ test:
 total:
 	./bin/create-total.sh
 	cat total/total.yara capa/capa.yar > total/total_inc_capa.yar
-	cd total && 7z a -pinfected total.7z total.yara
+	cd total && 7zz a -pinfected total.7z total.yara
 update-git:
 	cd sub && git submodule update --remote
 	# git submodule foreach git pull origin master
