@@ -1,5 +1,7 @@
 # YARA rules
 
+Will switch this repo status to public archive and I recommend usage of [yara-forge](https://yarahq.github.io/) instead since it is a much better solution.
+
 Collection of some YARA rules. Uses the following submodules:
 
 - [https://github.com/blackorbird/APT_REPORT.git](https://github.com/blackorbird/APT_REPORT.git) from [https://github.com/blackorbird/APT_REPORT](https://github.com/blackorbird/APT_REPORT)
